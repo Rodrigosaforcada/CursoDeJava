@@ -1,0 +1,21 @@
+Los pilares de la Programación Orientada a Objetos (POO) son: abstracción, encapsulamiento, herencia 
+y polimorfismo.
+
+Abstracción: una clase permite realizar una abstracción de una entidad del mundo real, o sea, omitir 
+detalles que no son necesarios para nosotros, y mostrar solamente lo que sí es relevante.
+
+Encapsulamiento: este principio implica que no se pueda acceder de manera directa a los atributos de 
+un objeto, de esta forma se crean métodos para restringir el acceso a la modificación de estos datos 
+para así poder controlar quien puede ver y utilizar los distintos módulos internos de nuestro sistema.
+
+Herencia: es una relación especial entre dos clases, la clase base y la clase derivada, en donde la 
+clase derivada obtiene la habilidad de utilizar ciertas propiedades y funcionalidades de la clase 
+base, incluso pudiendo sustituir funcionalidad de la clase base. La idea es que la clase derivada 
+“hereda” algunas de las características de la clase base.
+
+Polimorfismo: la palabra significa 'de muchas formas'. En nuestro caso llamamos polimorfismo cuando 
+un método recibe un parámetro que abarca varios tipos. La ventaja que esto ofrece es que podemos 
+generalizar algoritmos para que funcionen con distintos tipos. Un ejemplo de esto sería cualquier 
+clase que herede de Vehículo, como la clase Auto y la clase Motocicleta, las cuales pueden utilizar 
+ambas el método Reparar, y funcionarán perfectamente gracias al principio del polimorfismo, pues el 
+método reparar puede trabajar con varios clases distintas que heredan sus métodos de la misma clase padre.

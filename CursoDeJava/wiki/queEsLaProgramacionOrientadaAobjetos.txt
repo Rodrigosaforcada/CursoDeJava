@@ -1,1 +1,8 @@
-La Programación Orientada a Objetos es un paradigma de la programación donde para resolver un requerimiento (problema) planteado, se recurre a la representación de los distintos elementos de la realidad que intervienen en forma de objetos (por ejemplo: un auto, una persona, un empleado o cliente, etc.). Cómo muchos de estos objetos comparten características y comportamientos similares, para 'crearlos' se usa un molde llamado 'clase', el cual representa estos atributos (o características) y métodos (o comportamientos) similares para todos los objetos creados a partir de esta clase. Este modelo conceptual facilita el trabajo del programador de manera que disminuye los errores y promueve la reutilización (evita la repetición de la escritura) de código.
+La Programación Orientada a Objetos es un paradigma de la programación donde para resolver un 
+requerimiento (problema) planteado, se recurre a la representación de los distintos elementos 
+de la realidad que intervienen en forma de objetos (por ejemplo: un auto, una persona, un 
+empleado o cliente, etc.). Cómo muchos de estos objetos comparten características y comportamientos 
+similares, para 'crearlos' se usa un molde llamado 'clase', el cual representa estos atributos 
+(o características) y métodos (o comportamientos) similares para todos los objetos creados a 
+partir de esta clase. Este modelo conceptual facilita el trabajo del programador de manera que 
+disminuye los errores y promueve la reutilización (evita la repetición de la escritura) de código.

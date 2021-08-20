@@ -1,0 +1,2 @@
+Para clonar un repositorio remoto en mi computadora, utilizé los pasos explicados en los documentos facilitados por Git Hub, cuya URL es: https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository
+

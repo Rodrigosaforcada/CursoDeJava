@@ -4,7 +4,7 @@ public class AdivinarNumero {
     public static void main(String[] args) {
 
         int numeroAleatorio = (int) (Math.random()*100);
-        
+
         System.out.println("Adivine un número que se encuentra entre 1 y 100: ");
         Scanner reader = new Scanner(System.in);
         int numeroElegido = reader.nextInt();

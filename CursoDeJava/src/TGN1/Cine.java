@@ -3,7 +3,7 @@ package TGN1;
 import java.util.Scanner;
 
 public class Cine {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         String nombreEspectador;
         int edadEspectador = 0;
@@ -50,12 +50,13 @@ public class Cine {
 
         sala.setEspectadores(listaEspectadores);
 
-        try{
-            System.out.println("\nLista de esectadores: ");
+        try {
+            if (listaEspectadores[0] == null)
+                System.out.println("\nLista de esectadores: ");
             for (Espectadores espectador : sala.getEspectadores()) {
                 System.out.println("\n" + espectador.toString());
             }
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
             System.out.println("SIN ESPECTADORES CARGADOS");
         }
 

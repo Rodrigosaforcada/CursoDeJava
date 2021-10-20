@@ -58,7 +58,7 @@ public class Cine {
             i++;
         }
 
-        Salas sala = new Salas(1, "Sala01");
+        Salas sala = new Salas(3, "Sala01");
         sala.setPelicula("Joker");
 
         try {

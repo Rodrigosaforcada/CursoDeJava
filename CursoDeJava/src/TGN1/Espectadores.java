@@ -29,7 +29,7 @@ public class Espectadores extends Personas {
 
     @Override
     public String toString(){
-        return "nombre =" + getNombre() +
+        return "\nnombre =" + getNombre() +
                 "\nedad = " + getEdad();
     }
 
@@ -39,6 +39,6 @@ public class Espectadores extends Personas {
     }
 
     public String getButaca(String butaca) {
-        return "silla = " + butaca.charAt(1) + " fila = " + butaca.charAt(0);
+        return "\nsilla = " + butaca.charAt(1) + " fila = " + butaca.charAt(0);
     }
 }

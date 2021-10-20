@@ -45,7 +45,7 @@ public class Salas {
 
     @Override
     public String toString(){
-        return "nombre =" + getNombre() +
+        return "\nnombre =" + getNombre() +
                 "\nedad = " + getCapacidad();
     }
 }

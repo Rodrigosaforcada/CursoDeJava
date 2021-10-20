@@ -3,7 +3,7 @@ package TGN1;
 import java.util.Scanner;
 
 public class Cine {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         String nombreEspectador;
         int edadEspectador = 0;

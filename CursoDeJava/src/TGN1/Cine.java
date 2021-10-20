@@ -6,9 +6,11 @@ public class Cine {
     public static void main(String[] args) {
 
         String nombreEspectador;
-        int edadEspectador = 0;
+        int edadEspectador;
         String filaEspectador;
-        int sillaEspectador = 0;
+        int sillaEspectador;
+
+        int cantidadEspectadores;
 
         int i = 0;
 
@@ -20,7 +22,14 @@ public class Cine {
 
         int contador = datosEspectador.nextInt();
 
-        Espectadores[] listaEspectadores = new Espectadores[contador];
+        if(contador == 0) {
+            cantidadEspectadores = 1;
+        } else {
+            cantidadEspectadores = contador;
+        }
+
+        Espectadores[] listaEspectadores = new Espectadores[cantidadEspectadores];
+        listaEspectadores[0] = null;
 
         while(i < contador) {
             System.out.println("Escriba el nombre del espectador");
@@ -30,6 +39,8 @@ public class Cine {
                 edadEspectador = datosEspectador.nextInt();
             } catch (RuntimeException e) {
                 System.out.println("ERROR EN EL INGRESO DE DATOS");
+                e.printStackTrace();
+                break;
             }
             System.out.println("Indique la fila del espectador");
             filaEspectador = datosEspectador.next();
@@ -38,6 +49,8 @@ public class Cine {
                 sillaEspectador = datosEspectador.nextInt();
             } catch (RuntimeException e) {
                 System.out.println("ERROR EN EL INGRESO DE DATOS");
+                e.printStackTrace();
+                break;
             }
             Espectadores espectador =
                     new Espectadores(nombreEspectador, edadEspectador, filaEspectador, sillaEspectador);
@@ -45,19 +58,23 @@ public class Cine {
             i++;
         }
 
-        Salas sala = new Salas(3, "Sala01");
+        Salas sala = new Salas(1, "Sala01");
         sala.setPelicula("Joker");
 
-        sala.setEspectadores(listaEspectadores);
-
         try {
-            if (listaEspectadores[0] == null)
+            comprobarCapacidad(listaEspectadores, sala);
+            sala.setEspectadores(listaEspectadores);
+            try {
+                listaVacia(listaEspectadores);
                 System.out.println("\nLista de esectadores: ");
-            for (Espectadores espectador : sala.getEspectadores()) {
-                System.out.println("\n" + espectador.toString());
+                for (Espectadores espectador : sala.getEspectadores()) {
+                    System.out.println(espectador.toString());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            System.out.println("SIN ESPECTADORES CARGADOS");
+        } catch (Exception e){
+            e.printStackTrace();
         }
 
         Acomodadores acomodador = new Acomodadores("Alberto", 27);
@@ -69,5 +86,17 @@ public class Cine {
         Empleados empleado = new Empleados("Sebastian", 32);
 
         System.out.println("\nEmpleado designado a la sala: " + "\n" + empleado.toString());
+    }
+
+    static void comprobarCapacidad(Espectadores[] espectadores, Salas sala) throws Exception {
+        if (espectadores.length > sala.getCapacidad()){
+            throw new Exception("Hay demasiados espectadores para la capacidad de la sala.");
+        }
+    }
+
+    static void listaVacia(Espectadores[] espectadores) throws Exception {
+        if (espectadores[0] == null) {
+            throw new Exception("SIN ESPECTADORES CARGADOS");
+        }
     }
 }

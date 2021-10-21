@@ -14,15 +14,27 @@ public class Cine {
 
         int i = 0;
 
+        int contador = 0;
+
         Scanner datosEspectador = new Scanner(System.in);
 
         System.out.println("Por favor ingrese el nombre, edad, fila y silla de cada espectador " +
                 "y cuántos espectadores desea agregar.");
         System.out.println("¿Cuántos espectadores van a ser agregados?");
 
-        int contador = datosEspectador.nextInt();
+        try {
+            contador = datosEspectador.nextInt();
+            try {
+                numeroPositivo(contador);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        } catch (RuntimeException e) {
+            System.out.println("ERROR EN EL INGRESO DE DATOS");
+            e.printStackTrace();
+        }
 
-        if(contador == 0) {
+        if(contador == 0 || contador < 0) {
             cantidadEspectadores = 1;
         } else {
             cantidadEspectadores = contador;
@@ -86,6 +98,12 @@ public class Cine {
         Empleados empleado = new Empleados("Sebastian", 32);
 
         System.out.println("\nEmpleado designado a la sala: " + "\n" + empleado.toString());
+    }
+
+    static void numeroPositivo(int numero) throws Exception {
+        if(numero < 0) {
+            throw new Exception("No se pueden ingresar numeros negativos");
+        }
     }
 
     static void comprobarCapacidad(Espectadores[] espectadores, Salas sala) throws Exception {

@@ -30,7 +30,9 @@ public class Espectadores extends Personas {
     @Override
     public String toString(){
         return "\nnombre =" + getNombre() +
-                "\nedad = " + getEdad();
+                "\nedad = " + getEdad() +
+                "\nfila = " + getFila() +
+                "\nsilla = " + getSilla();
     }
 
     @Override
